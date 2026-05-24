@@ -1,0 +1,302 @@
+<!-- IMS566 Assignment Guidelines Page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduTrack Dashboard</title>
+    <!-- Tab Icon -->
+    <link rel="icon" type="image/svg" href="mortarboard-fill.svg">
+    <!-- Bootsrap CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!-- Bootsrap Icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg shadow-sm custom-navbar">
+  <div class="container-fluid px-4">
+
+    <!-- Brand -->
+    <a class="navbar-brand fw-bold" href="#">
+      <span class="edu-text">Edu</span>Track Dashboard
+    </a>
+
+    <!-- RIGHT SIDE -->
+    <div class="d-flex align-items-center gap-2 ms-auto order-lg-2">
+
+      <!-- Notification -->
+      <div class="dropdown">
+
+        <button class="btn notification-btn position-relative"
+          data-bs-toggle="dropdown"
+          aria-expanded="false">
+
+          <i class="bi bi-bell-fill"></i>
+
+          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+            3
+          </span>
+
+        </button>
+
+        <!-- Dropdown Menu -->
+        <ul class="dropdown-menu dropdown-menu-end shadow">
+          
+           <!--Notifications-->
+          <li>
+            <h6 class="dropdown-header">
+              Notifications
+            </h6>
+          </li>
+
+          <li>
+            <a class="dropdown-item" href="#">
+              Assignment due tomorrow
+            </a>
+          </li>
+
+          <li>
+            <a class="dropdown-item" href="#">
+              New course material uploaded
+            </a>
+          </li>
+
+          <li>
+            <a class="dropdown-item" href="#">
+              Attendance updated
+            </a>
+          </li>
+
+          <li><hr class="dropdown-divider"></li>
+
+          <li>
+            <a class="dropdown-item text-primary" href="#">
+              View all notifications
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+      <!-- Dark Mode -->
+      <button class="dark-mode-toggle"
+        id="darkModeToggle">
+
+        <i class="bi bi-moon-stars-fill"
+          id="darkModeIcon"></i>
+
+      </button>
+
+      <!-- Profile -->
+      <div class="dropdown">
+
+        <button class="btn profile-btn"
+          data-bs-toggle="dropdown">
+
+          <img src="Picture1.jpg"
+            class="profile-pic">
+
+        </button>
+
+        <ul class="dropdown-menu dropdown-menu-end shadow">
+          <li>
+            <a class="dropdown-item" href="index.html">
+              Log-out
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="MyProfile.html">
+              Profile
+            </a>
+          </li>
+        </ul>
+
+      </div>
+
+      <!-- Burger -->
+      <button class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarMenu">
+
+        <span class="navbar-toggler-icon"></span>
+
+      </button>
+
+    </div>
+
+    <!-- MENU -->
+    <div class="collapse navbar-collapse order-lg-1 mt-3 mt-lg-0"
+      id="navbarMenu">
+
+      <ul class="navbar-nav ms-lg-4">
+
+        <li class="nav-item">
+          <a class="nav-link active" href="dashboard.html">
+            <i class="bi bi-house-door-fill me-1"></i>
+            Home
+          </a>
+        </li>
+
+        <li class="nav-item dropdown">
+
+          <a class="nav-link dropdown-toggle active"
+            href="#"
+            id="coursesDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false">
+
+            <i class="bi bi-journal-bookmark-fill me-1"></i>
+            Courses
+
+          </a>
+
+          <ul class="dropdown-menu shadow border-0 rounded-4 p-3 mt-2 course-dropdown">
+
+            <!-- Recent -->
+            <li class="dropdown-header text-uppercase small fw-bold text-muted mb-2">
+              Recent Views
+            </li>
+
+            <li>
+              <a class="dropdown-item rounded-3 mb-2" href="ims566.html">
+                <div class="fw-semibold">IMS566</div>
+              </a>
+            </li>
+
+            <li>
+              <a class="dropdown-item rounded-3 mb-3" href="iml512.html">
+                <div class="fw-semibold">IML512</div>
+              </a>
+            </li>
+
+            <!-- Divider -->
+            <li><hr class="dropdown-divider"></li>
+
+            <!-- View All -->
+            <li>
+              <a class="dropdown-item d-flex align-items-center justify-content-between rounded-3"
+                href="courses.html">
+
+                <span>
+                  <i class="bi bi-grid me-2"></i>
+                  View All Courses
+                </span>
+
+                <i class="bi bi-arrow-right-short"></i>
+
+              </a>
+            </li>
+
+          </ul>
+
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link active" href="tasks.html">
+            <i class="bi bi-clipboard-check-fill me-1"></i>
+            Tasks
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link active" href="Schedule.html">
+            <i class="bi bi-calendar-week me-1"></i>
+            Schedule
+          </a>
+
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link active" href="Grades.html">
+            <i class="bi bi-bar-chart-line me-1"></i>
+            Grades
+          </a>
+        </li>
+
+      </ul>
+
+    </div>
+
+  </div>
+</nav>
+<main class="content px-3 py-4">
+
+    <!-- COURSE HEADER -->
+    <div class="container-fluid px-4 py-4">
+        <!-- Breadcrumb -->
+        <div class="d-flex align-items-center mb-4 text-muted">
+            <i class="bi bi-chevron-left me-2 text-white"></i>
+            <a href="courses.html" class="text-decoration-none my-course-link fw-bold text-white">My Courses</a>
+            <i class="bi bi-chevron-left mx-2 text-white"></i>
+            <a href="ims566.html" class=" text-decoration-none my-course-link fw-bold text-white">IMS566</a>
+            <i class="bi bi-chevron-right mx-2 text-white"></i>
+            <span class="fw-bold text-white">Guidelines</span>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="col-12">
+            <div class="card border-0 shadow-lg rounded-4">
+                <div class="card-body p-4 p-lg-5">
+                    <div class="row align-items-center">
+                        <div class="pdf-container">
+                            <iframe src="PDF/IMS566 Individual guidelines.pdf"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+    <!-- Bootsrap JS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <!-- Dark Mode Switch --> 
+    <script>
+        //reference element
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const darkModeIcon = document.getElementById('darkModeIcon');
+        const htmlElement = document.documentElement;
+
+        //check theme
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        htmlElement.setAttribute('data-bs-theme', currentTheme);
+        updateIcon(currentTheme);
+
+        //toggle dark mode
+        darkModeToggle.addEventListener('click', () => {
+            const currentTheme = htmlElement.getAttribute('data-bs-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+
+            htmlElement.setAttribute('data-bs-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateIcon(newTheme);
+        });
+
+        //update icon
+        function updateIcon(theme) {
+            if (theme === 'dark') {
+                darkModeIcon.className = 'bi bi-brightness-high-fill';
+                darkModeIcon.style.color = '#ffc107';
+            } else {
+                darkModeIcon.className = 'bi bi-moon-stars-fill';
+                darkModeIcon.style.color = '#0d6efd';
+            }
+        }
+    </script>
+<footer>
+    <p class="mb-0">&copy; 2026 EduTrack</p>
+</footer>
+</body>
+</html>

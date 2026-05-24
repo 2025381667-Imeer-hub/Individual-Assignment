@@ -1,0 +1,1139 @@
+<!-- Dashboard Page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduTrack Dashboard</title>
+    <!-- Bootsrap CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!-- Bootsrap Icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg shadow-sm custom-navbar">
+  <div class="container-fluid px-4">
+
+    <!-- Brand -->
+    <a class="navbar-brand fw-bold" href="#">
+      <span class="edu-text">Edu</span>Track Dashboard
+    </a>
+
+    <!-- RIGHT SIDE -->
+    <div class="d-flex align-items-center gap-2 ms-auto order-lg-2">
+
+      <!-- Notification -->
+      <div class="dropdown">
+
+        <button class="btn notification-btn position-relative"
+          data-bs-toggle="dropdown"
+          aria-expanded="false">
+
+          <i class="bi bi-bell-fill"></i>
+
+          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+            3
+          </span>
+
+        </button>
+
+        <!-- Dropdown Menu -->
+        <ul class="dropdown-menu dropdown-menu-end shadow">
+          
+           <!--Notifications-->
+          <li>
+            <h6 class="dropdown-header">
+              Notifications
+            </h6>
+          </li>
+
+          <li>
+            <a class="dropdown-item" href="#">
+              Assignment due tomorrow
+            </a>
+          </li>
+
+          <li>
+            <a class="dropdown-item" href="#">
+              New course material uploaded
+            </a>
+          </li>
+
+          <li>
+            <a class="dropdown-item" href="#">
+              Attendance updated
+            </a>
+          </li>
+
+          <li><hr class="dropdown-divider"></li>
+
+          <li>
+            <a class="dropdown-item text-primary" href="#">
+              View all notifications
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+      <!-- Dark Mode -->
+      <button class="dark-mode-toggle"
+        id="darkModeToggle">
+
+        <i class="bi bi-moon-stars-fill"
+          id="darkModeIcon"></i>
+
+      </button>
+
+      <!-- Profile -->
+      <div class="dropdown">
+
+        <button class="btn profile-btn"
+          data-bs-toggle="dropdown">
+
+          <img src="Picture1.jpg"
+            class="profile-pic">
+
+        </button>
+
+        <ul class="dropdown-menu dropdown-menu-end shadow">
+           <li>
+            <a class="dropdown-item" href="index.html">
+              Log-out
+            </a>
+          </li>
+        </ul>
+
+      </div>
+
+      <!-- Burger -->
+      <button class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarMenu">
+
+        <span class="navbar-toggler-icon"></span>
+
+      </button>
+
+    </div>
+
+    <!-- MENU -->
+    <div class="collapse navbar-collapse order-lg-1 mt-3 mt-lg-0"
+      id="navbarMenu">
+
+      <ul class="navbar-nav ms-lg-4">
+
+        <li class="nav-item">
+          <a class="nav-link active" href="#">
+            <i class="bi bi-house-door-fill me-1"></i>
+            Home
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link active" href="courses.html">
+            <i class="bi bi-journal-bookmark-fill me-1"></i>
+            Courses
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link active" href="#">
+            <i class="bi bi-clipboard-check-fill me-1"></i>
+            Tasks
+          </a>
+        </li>
+
+      </ul>
+
+    </div>
+
+  </div>
+</nav>
+<main class="content px-3 py-4">
+  <div class="container-fluid">
+
+    <!-- Welcome Section -->
+    <div class="mb-4">
+      <h2 class="fw-bold">Welcome back, Imeer!</h2>
+      <p class="text-muted mb-0">
+        Here’s a quick overview of your academic progress. Stay consistent and keep improving!
+      </p>
+    </div>
+
+    <!-- Dashboard Title -->
+    <div class="mb-3">
+      <h3 class="fw-bold fs-4 mb-3">Task Dashboard</h3>
+
+      <!-- FIRST ROW -->
+      <div class="row g-3">
+        
+        <!-- GPA Card -->
+        <div class="col-12 col-md-4">
+          <div class="card shadow">
+            <div class="card-body py-4">
+              <h6 class="mb-2 fw-bold">Current GPA</h6>
+              <p class="fw-bold mb-2 fs-4">3.82</p>
+              <div class="m-0">
+                <span class="badge bg-warning me-2">-0.06</span>
+                <span class="fw-bold"> Worsen from last semester</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Assignments Card -->
+        <div class="col-12 col-md-4">
+          <div class="card shadow">
+            <div class="card-body py-4">
+              <h6 class="mb-2 fw-bold">Assignments</h6>
+              <p class="fw-bold mb-2 fs-4">8 / 12 Completed</p>
+              <div class="m-0">
+                <span class="badge bg-warning text-dark me-2">4 Pending</span>
+                <span class="fw-bold">Due this week</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Attendance Card -->
+        <div class="col-12 col-md-4">
+          <div class="card shadow">
+            <div class="card-body py-4">
+              <h6 class="mb-2 fw-bold">Attendance</h6>
+              <p class="fw-bold mb-2 fs-4">92%</p>
+              <div class="m-0">
+                <span class="badge bg-success me-2">Good</span>
+                <span class="fw-bold">Keep it up</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- SECOND ROW -->
+      <div class="row g-3 mt-1">
+
+        <!-- Performance Overview Card -->
+        <div class="col-12 col-md-6">
+          <div class="card shadow">
+            <div class="card-body py-5">
+
+              <!-- Header + Buttons -->
+              <!-- Header + Buttons -->
+              <div class="mb-3">
+
+                <!-- Top row -->
+                <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+                  <h6 class="fw-bold mb-0">Performance Overview</h6>
+
+                  <div class="btn-group">
+                    <button class="btn btn-sm btn-chart active" onclick="changeChart('gpa-chart', this)">
+                      GPA
+                    </button>
+
+                    <button class="btn btn-sm btn-chart" onclick="changeChart('assignment-chart', this)">
+                      Assignments
+                    </button>
+
+                    <button class="btn btn-sm btn-chart" onclick="changeChart('attendance-chart', this)">
+                      Attendance
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Bottom row (description) -->
+                <p class="text-muted mb-0 mt-1">
+                  Monitor your academic progress and activity trends
+                </p>
+
+              </div>
+
+              <!-- Chart -->
+              <canvas id="gpa-chart"></canvas>
+              <canvas id="assignment-chart" class="d-none"></canvas>
+              <canvas id="attendance-chart" class="d-none"></canvas>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Upcoming Class Card -->
+        <div class="col-12 col-md-6">
+          <div class="card shadow h-100">
+            <div class="card-body">
+
+              <h6 class="fw-bold">Schedule</h6>
+              <p class="text-muted">Class Schedule</p>
+
+              <!-- Responsive Table -->
+              <div class="table-responsive">
+                <table class="table table-hover text-center align-middle schedule-table">
+                  
+                  <thead class="table-light">
+                    <tr>
+                      <th>Time</th>
+                      <th>Monday</th>
+                      <th>Tuesday</th>
+                      <th>Wednesday</th>
+                      <th>Thursday</th>
+                      <th>Friday</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+
+                    <tr>
+                      <th scope="row">8:00 A.M.</th>
+                      <td></td>
+                      <td></td>
+                      <td rowspan="2" class="table-info"><strong>LCC501</strong></td>
+                      <td></td>
+                      <td rowspan="2" class="table-success"><strong>IML512</strong></td>
+                    </tr>
+
+                    <tr>
+                      <th scope="row">9:00 A.M.</th>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+
+                    <tr>
+                      <th scope="row">10:00 A.M.</th>
+                      <td></td>
+                      <td></td>
+                      <td rowspan="2" class="table-primary"><strong>TEC451</strong></td>
+                      <td></td>
+                      <td class="table-success"><strong>IML512</strong></td>
+                    </tr>
+
+                    <tr>
+                      <th scope="row">11:00 A.M.</th>
+                      <td></td>
+                      <td rowspan="3" class="table-info"><strong>IMS565</strong></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+
+                    <tr>
+                      <th scope="row">12:00 P.M.</th>
+                      <td rowspan="4" class="table-info"><strong>IMS566</strong></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+
+                    <tr>
+                      <th scope="row">1:00 P.M.</th>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+
+                    <tr>
+                      <th scope="row">2:00 P.M.</th>
+                      <td rowspan="3" class="table-primary"><strong>IMS560</strong></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+
+                    <tr>
+                      <th scope="row">3:00 P.M.</th>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+
+                    <tr>
+                      <th scope="row">4:00 P.M.</th>
+                      <td></td>
+                      <td rowspan="2" class="table-info"><strong>CTU554</strong></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+
+                    <tr>
+                      <th scope="row">5:00 P.M.</th>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+
+                  </tbody>
+                </table>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</main>
+    <!-- Bootsrap JS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <!-- Dark Mode Switch --> 
+      <script>
+        //reference element
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const darkModeIcon = document.getElementById('darkModeIcon');
+        const htmlElement = document.documentElement;
+
+        //check theme
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        htmlElement.setAttribute('data-bs-theme', currentTheme);
+        updateIcon(currentTheme);
+
+        //toggle dark mode
+        darkModeToggle.addEventListener('click', () => {
+            const currentTheme = htmlElement.getAttribute('data-bs-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+
+            htmlElement.setAttribute('data-bs-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateIcon(newTheme);
+        });
+
+        //update icon
+        function updateIcon(theme) {
+            if (theme === 'dark') {
+                darkModeIcon.className = 'bi bi-brightness-high-fill';
+            } else {
+                darkModeIcon.className = 'bi bi-moon-stars-fill';
+            }
+        }
+      </script>
+      <!-- Chart JS -->
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      <script>
+      const gpactx = document.getElementById('gpa-chart');
+
+      new Chart(gpactx, {
+        type: 'line',
+        data: {
+          labels: ['Semester 1', 'Semester 2', 'Semester 3', 'Semester 4'],
+          datasets: [{
+            label: 'GPA',
+            data: [3.91, 3.91, 3.89, 3.82],
+            borderWidth: 1
+          }]
+        },
+        options: {
+          scales: {
+            y: {
+              reverse: false, // starts from bottom to top
+              min: 0,
+              max: 4,
+              ticks: {
+                stepSize: 1,
+                callback: function(value) {
+                  return value.toFixed(1);
+                }
+              }
+            }
+          }
+        }
+      });
+      const assignmentCtx = document.getElementById('assignment-chart');
+
+      const assignmentChart = new Chart(assignmentCtx, {
+        type: 'doughnut',
+        data: {
+          labels: ['Completed', 'Pending', 'Late'],
+          datasets: [{
+            data: [70, 20, 10],
+            backgroundColor: [
+              '#28a745',  // green
+              '#ffc107',  // yellow
+              '#dc3545'   // red
+            ],
+            borderWidth: 1
+          }]
+        },
+        options: {
+          responsive: true,
+          radius: '60%',
+          cutout: '60%',
+          plugins: {
+            legend: {
+              position: 'right'
+            }
+          }
+        }
+      });
+    </script>
+    <script>
+    function changeChart(chartId, btn) {
+          // remove active state
+          document.querySelectorAll('.btn-chart').forEach(b => {
+              b.classList.remove('active');
+          });
+
+          btn.classList.add('active');
+
+          // hide all charts
+          document.querySelectorAll('canvas').forEach(canvas => {
+              canvas.classList.add('d-none');
+          });
+
+          // show selected chart
+          document.getElementById(chartId).classList.remove('d-none');
+    }
+    </script>
+    
+    
+<footer>
+    <p class="mb-0">&copy; 2026 EduTrack | Smart Student Management System</p>
+</footer>
+</body>
+</html>
+
+            <!-- Class Details Grid -->
+            <div class="row g-3 mt-2 pb-4 align-items-center">
+
+                <!-- Date -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="d-flex align-items-center">
+
+                        <div class="attendance-icon bg-light-blue text-blue me-3">
+                            <i class="bi bi-calendar-event"></i>
+                        </div>
+
+                        <div>
+                            <small class="text-muted d-block">Date</small>
+                            <span class="fw-semibold">18/5/2026</span>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Class Type -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="d-flex align-items-center">
+
+                        <div class="attendance-icon bg-light-green text-green me-3">
+                            <i class="bi bi-easel2"></i>
+                        </div>
+
+                        <div>
+                            <small class="text-muted d-block">Class Type</small>
+                            <span class="fw-semibold">Physical Class</span>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Time -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="d-flex align-items-center">
+
+                        <div class="attendance-icon bg-light-orange text-orange me-3">
+                            <i class="bi bi-clock"></i>
+                        </div>
+
+                        <div>
+                            <small class="text-muted d-block">Time</small>
+                            <span class="fw-semibold">12:00 - 16:00</span>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Location -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="d-flex align-items-center">
+
+                        <div class="attendance-icon bg-light-purple text-purple me-3">
+                            <i class="bi bi-geo-alt"></i>
+                        </div>
+
+                        <div>
+                            <small class="text-muted d-block">Location</small>
+                            <span class="fw-semibold">Computer Room 11</span>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Lecturer -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="d-flex align-items-center">
+
+                        <div class="attendance-icon bg-light-info text-info me-3">
+                            <i class="bi bi-person-video3"></i>
+                        </div>
+
+                        <div>
+                            <small class="text-muted d-block">Lecturer</small>
+                            <span class="fw-semibold">Dr. Ahmad Faiz</span>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Group -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="d-flex align-items-center">
+
+                        <div class="attendance-icon bg-light-dark text-dark me-3">
+                            <i class="bi bi-people"></i>
+                        </div>
+
+                        <div>
+                            <small class="text-muted d-block">Group</small>
+                            <span class="fw-semibold">CDIM2624ST2</span>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <!-- Table -->
+            <div class="table-responsive mt-4 pb-5">
+
+                <table class="table align-middle">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Student ID</th>
+                            <th scope="col">Full Name</th>
+                            <th scope="col">Program</th>
+                            <th scope="col">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>2025381667</td>
+                            <td>IMEER HAFIZ BIN ISYRAF</td>
+                            <td>CDIM262</td>
+                            <td>
+                                <div class="dropdown">
+                                    <button 
+                                        class="btn btn-outline-secondary dropdown-toggle btn-sm" 
+                                        type="button" 
+                                        data-bs-toggle="dropdown"
+                                    >
+                                        Attendance Status
+                                    </button>
+                                    <ul class="dropdown-menu" style="z-index: 1050;">
+                                        <li><a class="dropdown-item" href="#">Present</a></li>
+                                        <li><a class="dropdown-item" href="#">Absent</a></li>
+                                        <li><a class="dropdown-item" href="#">Absent with Permission</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="tab-pane fade show active" id="overview">
+        <div class="row g-4">
+
+        <!-- BIG CARD -->
+        <div class="col-lg-8">
+
+            <div class="card shadow border-0 h-100">
+                <div class="card-body p-4">
+
+                    <!-- Header -->
+                    <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap">
+
+                        <!-- Title -->
+                        <h3 class="fw-bold mb-2 mb-lg-0">
+                            Advanced Web Design Development
+                        </h3>
+
+                        <!-- Pills -->
+                        <ul class="nav nav-pills ms-auto" id="pills-tab" role="tablist">
+
+                            <li class="nav-item">
+                                <a class="nav-link active"
+                                id="pills-home-tab"
+                                data-bs-toggle="pill"
+                                href="#pills-home"
+                                role="tab"
+                                aria-controls="pills-home"
+                                aria-selected="true">
+                                Overview
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link"
+                                id="pills-profile-tab"
+                                data-bs-toggle="pill"
+                                href="#pills-profile"
+                                role="tab"
+                                aria-controls="pills-profile"
+                                aria-selected="false">
+                                Assessments
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link"
+                                id="pills-contact-tab"
+                                data-bs-toggle="pill"
+                                href="#pills-contact"
+                                role="tab"
+                                aria-controls="pills-contact"
+                                aria-selected="false">
+                                Course Syllabus
+                                </a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                    <!-- TAB CONTENT -->
+                    <div class="tab-content" id="pills-tabContent">
+
+                        <!-- OVERVIEW -->
+                        <div class="tab-pane fade show active"
+                            id="pills-home"
+                            role="tabpanel"
+                            aria-labelledby="pills-home-tab">
+
+                            <p>
+                                This course exposes students to essential concepts of the World Wide Web that enable modern web applications for managing online information.
+                                It focuses on both client-side and server-side scripting to develop secure, database-driven applications for efficient information storage,
+                                retrieval, and interactive access.
+                            </p>
+
+                            <p>
+                                Students are also introduced to web application development using Integrated Development Environments (IDE), along with the application
+                                of standard metadata elements to support structured information management, retrieval, and dissemination.
+                            </p>
+
+                            <div class="mt-4">
+                                <h6 class="fw-bold">Key Learning Areas</h6>
+
+                                <ul class="mb-3">
+                                    <li>Client-side & server-side scripting</li>
+                                    <li>Database-driven web application development</li>
+                                    <li>Secure data storage and retrieval techniques</li>
+                                    <li>Use of IDE tools for development workflow</li>
+                                    <li>Metadata standards for information organization</li>
+                                </ul>
+                            </div>
+
+                            <!-- Badges -->
+                            <div class="mb-3">
+                                <span class="badge bg-primary me-1">Web Development</span>
+                                <span class="badge bg-success me-1">Database</span>
+                            </div>
+
+                        </div>
+
+                        <!-- ASSESSMENTS -->
+                        <div class="tab-pane fade"
+                            id="pills-profile"
+                            role="tabpanel"
+                            aria-labelledby="pills-profile-tab">
+
+                            <p class="mb-4 pb-3 border-bottom">
+                                This course assessment evaluates students through a combination of individual and group work.
+                                Each component contributes to the final grade, focusing on continuous learning, practical application, teamwork, and final evaluation.
+                            </p>
+
+                            <!-- ITEM -->
+                            <div class="mb-4 pb-3 border-bottom">
+
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <h6 class="fw-bold mb-0">Continuous Assessment (70%)</h6>
+                                </div>
+
+                                <p class="mb-0">
+                                    Evaluates ongoing performance throughout the semester including participation, quizzes, in-class activities, assignments, and presentations. 
+                                    This assessment includes both individual and group tasks.
+                                </p>
+
+                                <div class="mt-4">
+                                    <h6 class="fw-bold">1. Individual Assessment (20%)</h6>
+
+                                    <ul class="mb-3">
+                                        <li>Students must apply the theories, techniques, and tools learned in lectures to build a small-scale but professional web application prototype.  </li>
+                                        <li>Each student must design and develop a web application interface using any suitable theme</li>
+                                    </ul>
+                                </div>
+                                <div class="mt-4">
+                                    <h6 class="fw-bold">2. Group Assessment (50%)</h6>
+
+                                    <ul class="mb-3">
+                                        <li>Each student must design and develop a web application interface and has a functional database using any suitable theme</li>
+                                        <li>Database-driven web application development</li>
+                                    </ul>
+                                </div>
+                                <div class="mt-4">
+                                    <h6 class="fw-bold">3. Final Test (30%)</h6>
+
+                                    <ul class="mb-3">
+                                        <li>Written test assessing overall understanding of the course. </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+
+                            <!-- ITEM -->
+                            <div>
+
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <h6 class="fw-bold mb-0">Final  Examination (30%)</h6>
+                                </div>
+
+                                <p>
+                                    Written or practical examination assessing overall understanding of the course.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        <!-- SYLLABUS -->
+                        <div class="tab-pane fade"
+                            id="pills-contact"
+                            role="tabpanel"
+                            aria-labelledby="pills-contact-tab">
+
+                            <h5 class="fw-bold mb-3">Course Syllabus</h5>
+
+                            <p class="text-muted mb-4">
+                                This syllabus outlines the main topics covered throughout the course, starting from foundational web concepts
+                                to advanced web application development, database integration, and open-source frameworks.
+                            </p>
+
+                            <!-- 1 -->
+                            <div class="mb-4">
+                                <h6 class="fw-bold">1. Internet, World Wide Web and Applications</h6>
+                                <ul class="text-muted mb-0">
+                                    <li>Keeping up-to-date with IT</li>
+                                    <li>Content Management Systems (CMS)</li>
+                                    <li>Web Basics</li>
+                                    <li>Web 2.0, Web 3.0 and Future Web</li>
+                                </ul>
+                            </div>
+
+                            <!-- 2 -->
+                            <div class="mb-4">
+                                <h6 class="fw-bold">2. Browsers and Web Servers Fundamentals</h6>
+                                <ul class="text-muted mb-0">
+                                    <li>HTTP Transaction</li>
+                                    <li>Web Browsers</li>
+                                    <li>Multitier Application Architecture</li>
+                                    <li>Accessing Web Servers</li>
+                                    <li>Web Server Packages (WAMP, LAMP, MAMP, XAMPP)</li>
+                                </ul>
+                            </div>
+
+                            <!-- 3 -->
+                            <div class="mb-4">
+                                <h6 class="fw-bold">3. Markup and Style Sheet Language (XHTML & CSS)</h6>
+                                <ul class="text-muted mb-0">
+                                    <li>Introduction to XHTML & CSS</li>
+                                    <li>Elements and Attributes</li>
+                                    <li>CSS Selectors and Properties</li>
+                                    <li>Inline, Internal and External Stylesheets</li>
+                                </ul>
+                            </div>
+
+                            <!-- 4 -->
+                            <div class="mb-4">
+                                <h6 class="fw-bold">4. XML and Metadata Concepts</h6>
+                                <ul class="text-muted mb-0">
+                                    <li>XML Basics and Data Structuring</li>
+                                    <li>XML Namespaces and DTD</li>
+                                    <li>XSL (eXtensible Stylesheet Language)</li>
+                                    <li>Metadata Standards (DCMI, METS, MODS, RDF)</li>
+                                </ul>
+                            </div>
+
+                            <!-- 5 -->
+                            <div class="mb-4">
+                                <h6 class="fw-bold">5. Client-Side Scripting</h6>
+                                <ul class="text-muted mb-0">
+                                    <li>Variables, Operators, Functions</li>
+                                    <li>Control Structures and Arrays</li>
+                                    <li>Objects and Events</li>
+                                    <li>Cookies</li>
+                                </ul>
+                            </div>
+
+                            <!-- 6 -->
+                            <div class="mb-4">
+                                <h6 class="fw-bold">6. Server-Side Scripting</h6>
+                                <ul class="text-muted mb-0">
+                                    <li>Data Types, Variables, and Constants</li>
+                                    <li>Conditionals and Loops</li>
+                                    <li>Forms and User Input</li>
+                                    <li>Files, Sessions, and Cookies</li>
+                                    <li>Object-Oriented Concepts</li>
+                                </ul>
+                            </div>
+
+                            <!-- 7 -->
+                            <div class="mb-4">
+                                <h6 class="fw-bold">7. Web Database Design and Content Management</h6>
+                                <ul class="text-muted mb-0">
+                                    <li>Database Connectivity</li>
+                                    <li>SQL Query Execution</li>
+                                    <li>Data Retrieval, Update, and Deletion</li>
+                                    <li>Database Functions</li>
+                                </ul>
+                            </div>
+
+                            <!-- 8 -->
+                            <div class="mb-4">
+                                <h6 class="fw-bold">8. Secure Database-Driven Web Application</h6>
+                                <ul class="text-muted mb-0">
+                                    <li>System Architecture Overview</li>
+                                    <li>User Interface Design (Layout, Navigation, UI/UX)</li>
+                                    <li>Security, Sessions, and Cookies</li>
+                                    <li>Data Entry, Search, Edit, and Delete Functions</li>
+                                    <li>FAQs, Help, and Contact Modules</li>
+                                </ul>
+                            </div>
+
+                            <!-- 9 -->
+                            <div class="mb-0">
+                                <h6 class="fw-bold">9. Open Source Information Systems</h6>
+                                <ul class="text-muted mb-0">
+                                    <li>CMS Platforms (Mambo, Joomla)</li>
+                                    <li>Frameworks (Laravel, CodeIgniter, CakePHP)</li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Footer -->
+                    <div class="d-flex justify-content-between align-items-center mt-4 pt-3 border-top">
+                        <small class="text-muted fw-bold">Level: Intermediate</small>
+                        <small class="text-muted fw-bold">Credit: 3 Hours</small>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <!-- RIGHT SIDE -->
+        <div class="col-lg-4">
+
+            <div class="d-flex flex-column gap-4 h-100">
+
+                <!-- SMALL CARD 1 -->
+                <div class="card shadow border-0 flex-fill">
+                    <div class="card-body">
+                        <h5 class="fw-bold mb-3">Announcements</h5>
+                        <div class="d-flex align-items-stretch">
+                            <!-- Icon (tall block) -->
+                            <div class="class-icon bg-light-blue me-3 d-flex align-items-center justify-content-center">
+                                <i class="bi bi-megaphone text-primary fs-3"></i>
+                            </div>
+                            <!-- Text -->
+                            <div class="d-flex flex-column">
+
+                                <div class="d-flex align-items-center gap-2">
+                                    <p class="fw-bold mb-0">Assignment: Deadline Extended</p>
+
+                                    <span class="badge bg-primary-subtle text-primary">
+                                        Today
+                                    </span>
+                                </div>
+
+                                <p class="text-muted mb-0">
+                                    Individual Assignment Deadline is Extended until Next Week Friday
+                                </p>
+                            </div>
+                        </div>
+                        </br>
+                        <div class="d-flex align-items-stretch">
+                            <!-- Icon (tall block) -->
+                            <div class="class-icon bg-light-yellow me-3 d-flex align-items-center justify-content-center">
+                                <i class="bi bi-megaphone text-yellow fs-3"></i>
+                            </div>
+                            <!-- Text -->
+                            <div class="d-flex flex-column">
+                                <div class="d-flex align-items-center gap-2">
+                                    <p class="fw-bold mb-0">Class: Online</p>
+
+                                    <span class="badge bg-light-yellow text-yellow">
+                                        1 Day Ago
+                                    </span>
+                                </div>
+                                <p class="text-muted mb-0">
+                                    Please take note that next week class will be held online
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SMALL CARD 2 -->
+                <div class="card shadow border-0 flex-fill">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+
+                            <!-- Title -->
+                            <h5 class="fw-bold mb-0">
+                                Upcoming Classes
+                            </h5>
+
+                            <!-- View All -->
+                            <a href="#" class="text-decoration-none fw-semibold">
+                                View All
+                                <i class="bi bi-arrow-right ms-1"></i>
+                            </a>
+
+                        </div>
+                        
+                        <div class="d-flex align-items-stretch">
+                            <!-- Icon (tall block) -->
+                            <div class="class-icon bg-light-blue me-3 d-flex align-items-center justify-content-center">
+                                <i class="bi bi-calendar text-primary fs-3"></i>
+                            </div>
+                            <!-- Text -->
+                            <div class="d-flex flex-column">
+
+                                <div class="d-flex align-items-center gap-2">
+                                    <p class="fw-bold mb-0">Online Class</p>
+
+                                    <span class="badge bg-primary-subtle text-primary">
+                                        Today
+                                    </span>
+                                </div>
+
+                                <p class="text-muted mb-0">
+                                    18/5/2026 | 12:00 P.M - 4:00 P.M | Google Meet
+                                </p>
+
+                            </div>
+                        </div>
+                        </br>
+                        <div class="d-flex align-items-stretch">
+                            <!-- Icon (tall block) -->
+                            <div class="class-icon bg-light-yellow me-3 d-flex align-items-center justify-content-center">
+                                <i class="bi bi-calendar text-yellow fs-3"></i>
+                            </div>
+                            <!-- Text -->
+                            <div class="d-flex flex-column">
+                                <div class="d-flex align-items-center gap-2">
+                                    <p class="fw-bold mb-1">Physical Class</p>
+                                    <span class="badge bg-light-yellow text-yellow">
+                                        Next Week
+                                    </span>
+                                </div>
+                                <p class="text-muted mb-0">
+                                2/6/2026 | 12:00 P.M - 4:00 P.M | MK 11
+                                </p>
+                            </div>
+                        </div>
+                        </br>
+                        <div class="d-flex align-items-stretch">
+                            <!-- Icon (tall block) -->
+                            <div class="class-icon bg-light-gray me-3 d-flex align-items-center justify-content-center">
+                                <i class="bi bi-calendar text-dark fs-3"></i>
+                            </div>
+                            <!-- Text -->
+                            <div class="d-flex flex-column">
+                                <div class="d-flex align-items-center gap-2">
+                                    <p class="fw-bold mb-1">Physical Class</p>
+                                    <span class="badge bg-light-gray text-gray">
+                                        Upcomming
+                                    </span>
+                                </div>
+                                <p class="text-muted mb-0">
+                                9/6/2026 | 12:00 P.M - 4:00 P.M | MK 11
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+/* NAVIGATION */
+.nav-course{
+    text-decoration:none;
+    color:#6c757d;
+    font-weight:600;
+
+    padding-bottom:10px;
+
+    transition:0.3s;
+}
+
+.nav-course:hover{
+    color:#0D6EFD;
+}
+
+.active-course{
+    color:#0D6EFD;
+    border-bottom:3px solid #0D6EFD;
+}
+
+/* PROGRESS CIRCLE */
+.progress-circle{
+    width:90px;
+    height:90px;
+    border-radius:50%;
+
+    background:
+    conic-gradient(
+        #0D6EFD 68%,
+        #E9ECEF 0%
+    );
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    position:relative;
+}
+
+.progress-circle::before{
+    content:'';
+
+    position:absolute;
+
+    width:68px;
+    height:68px;
+
+    border-radius:50%;
+
+    background:white;
+}
+
+.progress-circle span{
+    position:relative;
+    z-index:2;
+
+    font-weight:bold;
+    font-size:20px;
+}
